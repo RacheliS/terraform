@@ -5,6 +5,9 @@ variable "num" {
 resource "aws_instance" "bar" {
   count = "${var.num}"
   foo   = "index-${count.index}"
+  metadata_options {
+    http_tokens = "required"
+  }
 }
 
 resource "aws_instance" "baz" {
