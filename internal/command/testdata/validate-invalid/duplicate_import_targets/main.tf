@@ -1,4 +1,7 @@
 resource "aws_instance" "web" {
+  metadata_options {
+    http_tokens = "required"
+  }
 }
 
 import {
