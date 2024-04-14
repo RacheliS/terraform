@@ -8,6 +8,9 @@ terraform {
 
 resource "aws_instance" "first" {}
 
+  metadata_options {
+    http_tokens = "required"
+  }
 resource "aws_instance" "second" {}
 
 resource "aws_instance" "third" {}
