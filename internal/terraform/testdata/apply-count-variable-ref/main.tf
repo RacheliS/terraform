@@ -4,6 +4,9 @@ variable "foo" {
 
 resource "aws_instance" "foo" {
   count = "${var.foo}"
+  metadata_options {
+    http_tokens = "required"
+  }
 }
 
 resource "aws_instance" "bar" {
