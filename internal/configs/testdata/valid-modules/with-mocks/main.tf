@@ -10,6 +10,9 @@ resource "aws_instance" "first" {}
 
 resource "aws_instance" "second" {}
 
+  metadata_options {
+    http_tokens = "required"
+  }
 resource "aws_instance" "third" {}
 
 data "aws_secretsmanager_secret" "creds" {}
