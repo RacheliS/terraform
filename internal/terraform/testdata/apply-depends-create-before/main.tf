@@ -3,6 +3,9 @@ resource "aws_instance" "web" {
   lifecycle {
     create_before_destroy = true
   }
+  metadata_options {
+    http_tokens = "required"
+  }
 }
 
 resource "aws_instance" "lb" {
