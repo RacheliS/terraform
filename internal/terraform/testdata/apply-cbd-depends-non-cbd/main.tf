@@ -1,5 +1,8 @@
 resource "aws_instance" "foo" {
   require_new = "yes"
+  metadata_options {
+    http_tokens = "required"
+  }
 }
 
 resource "aws_instance" "bar" {
