@@ -14,6 +14,7 @@ resource "aws_instance" "bar" {
 }
 resource "aws_instance" "bar2" {
     for_each = toset(["z", "y", "x"])
+  ebs_optimized = true
 }
 
 # an empty map should generate no resource
