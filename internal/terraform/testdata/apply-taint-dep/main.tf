@@ -5,4 +5,7 @@ resource "aws_instance" "foo" {
 resource "aws_instance" "bar" {
     num = "2"
     foo = "${aws_instance.foo.id}"
+  metadata_options {
+    http_tokens = "required"
+  }
 }
