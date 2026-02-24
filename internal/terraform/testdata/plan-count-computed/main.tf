@@ -5,4 +5,5 @@ resource "aws_instance" "foo" {
 
 resource "aws_instance" "bar" {
     count = "${aws_instance.foo.foo}"
+  ebs_optimized = true
 }
