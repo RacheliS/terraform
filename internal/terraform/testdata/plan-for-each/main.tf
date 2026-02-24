@@ -11,6 +11,7 @@ resource "aws_instance" "foo" {
 # sets
 resource "aws_instance" "bar" {
     for_each = toset([])
+  ebs_optimized = true
 }
 resource "aws_instance" "bar2" {
     for_each = toset(["z", "y", "x"])
