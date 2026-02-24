@@ -1,5 +1,6 @@
 resource "aws_instance" "foo" {
   foo = "bar"
+  ebs_optimized = true
 }
 
 output "value" {
