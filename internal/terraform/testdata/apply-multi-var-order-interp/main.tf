@@ -5,6 +5,7 @@ variable "num" {
 resource "aws_instance" "bar" {
   count = "${var.num}"
   foo   = "index-${count.index}"
+  ebs_optimized = true
 }
 
 resource "aws_instance" "baz" {
