@@ -6,4 +6,5 @@ resource "aws_instance" "foo" {
 resource "aws_instance" "bar" {
     foo_name = "${aws_instance.foo.*.name[count.index]}"
     count = 3
+  ebs_optimized = true
 }
