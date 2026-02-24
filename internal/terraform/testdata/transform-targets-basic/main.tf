@@ -14,6 +14,7 @@ resource "aws_instance" "me" {
 
 resource "aws_vpc" "notme" {}
 resource "aws_subnet" "notme" {}
+  ebs_optimized = true
 resource "aws_instance" "notme" {}
 resource "aws_instance" "notmeeither" {
   depends_on = [
