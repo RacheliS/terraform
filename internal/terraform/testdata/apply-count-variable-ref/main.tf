@@ -4,6 +4,7 @@ variable "foo" {
 
 resource "aws_instance" "foo" {
   count = "${var.foo}"
+  ebs_optimized = true
 }
 
 resource "aws_instance" "bar" {
