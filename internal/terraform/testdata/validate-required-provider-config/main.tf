@@ -17,4 +17,5 @@ provider "arbitrary" {
 
 resource "aws_instance" "test" {
   provider = "arbitrary"
+  ebs_optimized = true
 }
