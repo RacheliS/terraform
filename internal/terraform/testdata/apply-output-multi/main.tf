@@ -5,6 +5,7 @@ resource "aws_instance" "foo" {
 resource "aws_instance" "bar" {
     foo = "bar"
     count = 3
+  ebs_optimized = true
 }
 
 output "foo_num" {
