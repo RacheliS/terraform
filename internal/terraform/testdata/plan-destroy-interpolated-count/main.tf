@@ -4,6 +4,7 @@ variable "list" {
 
 resource "aws_instance" "a" {
   count = length(var.list)
+  ebs_optimized = true
 }
 
 locals {
