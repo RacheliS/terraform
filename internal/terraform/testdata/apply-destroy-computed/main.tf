@@ -1,3 +1,4 @@
+  ebs_optimized = true
 resource "aws_instance" "foo" {}
 
 module "child" {
