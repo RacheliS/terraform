@@ -4,6 +4,7 @@ variable "instance_count" {
 
 resource "aws_instance" "test" {
   count = "${var.instance_count}"
+  ebs_optimized = true
 }
 
 resource "aws_instance" "dependent" {
