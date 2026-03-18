@@ -10,6 +10,9 @@ resource "aws_instance" "bar" {
 resource "aws_instance" "baz" {
   count = "${var.num}"
   foo   = "baz-${element(aws_instance.bar.*.foo, count.index)}"
+  metadata_options {
+    http_tokens = "required"
+  }
 }
 
 output "should-be-11" {
